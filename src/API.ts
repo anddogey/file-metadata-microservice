@@ -15,7 +15,7 @@ export class API {
             res.sendFile(path.join(__dirname, '../public/index.html'));
         });
 
-        app.post('/api/upload', upload.single('upfile'), (req, res) => {
+        app.post('/api/fileanalyse', upload.single('upfile'), (req, res) => {
             console.log(req.file);
             res.json({
                 name: req.file?.originalname,
